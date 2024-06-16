@@ -5,7 +5,9 @@ class MoneyTest {
     @Test
     fun testMultiplication() {
         val five = Dollar(5)
-        five.times(2)
-        Assertions.assertEquals(10, five.amount)
+        var product = five.times(2)
+        Assertions.assertEquals(10, product.amount)
+        product = five.times(3)
+        Assertions.assertEquals(15, product.amount)
     }
 }
