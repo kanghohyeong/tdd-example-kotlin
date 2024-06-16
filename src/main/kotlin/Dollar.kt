@@ -1,5 +1,5 @@
 class Dollar(
-    var amount: Int
+    private val amount: Int
 ) {
     fun times(mutiplier: Int): Dollar {
         return Dollar(amount * mutiplier)
