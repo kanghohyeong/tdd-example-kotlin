@@ -1,4 +1,4 @@
-abstract class Money(protected val amount: Int, private val currency: String) {
+open class Money(protected val amount: Int, private val currency: String) {
     companion object {
         fun dollar(amount: Int): Money {
             return Dollar(amount, "USD")
@@ -9,7 +9,9 @@ abstract class Money(protected val amount: Int, private val currency: String) {
         }
     }
 
-    abstract fun times(multiplier: Int): Money
+    fun times(multiplier: Int): Money {
+        return Money(amount * multiplier, currency)
+    }
 
     fun currency(): String {
         return currency
@@ -17,6 +19,10 @@ abstract class Money(protected val amount: Int, private val currency: String) {
 
     override fun equals(other: Any?): Boolean {
         val money = other as Money
-        return amount == money.amount && (this::class == money::class)
+        return amount == money.amount && currency == money.currency
+    }
+
+    override fun toString(): String {
+        return "$amount $currency"
     }
 }
