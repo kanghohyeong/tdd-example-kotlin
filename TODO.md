@@ -17,17 +17,14 @@
 - equal null
 - equal object
 - ~~5CHF * 2 = 10CHF~~
-- Dollar/Fran 중복
+- ~~Dollar/Fran 중복~~
 - ~~공용 equals~~
 - ~~공용 times~~
 - ~~Franc과 Dollar 비교하기~~
 - ~~통화?~~
-- testFrancMultiplication을 지워야 할까?
+- ~~testFrancMultiplication을 지워야 할까?~~
   - testMulitplication 에서 모두 검증됨
 
 ## 교훈
-- 두 times() 를 일치시키기 위해 메서드 내 다른 메서드들을 인라인 시키고 상수를 변수로 바꿈
-- Franc 대신 Money를 반환하는 변경을 시도한 뒤 그것이 잘 작동할지를 테스트한테 물어봄
-  - Money 를 반환하는게 맞는지 틀리는지 고민하게됨. 컴퓨터라면 즉시 답할 수 있는 문제를 놓고 최고의 소프트웨어 엔지니어들이 몇분동안 고민하기도 함.
-  - 그냥 시켜보자.
-- 실험한 것을 물리고 또 다른 테스트 작성. 테스트를 작동했더니 실험도 제대로 작동.
+- 하위 클래스의 속을 들어내는 걸 완료하고, 하위 클래스 삭제
+- 기존 소스 구조에서는 필요했지만 새로운 구조에서는 필요 없게 된 테스트 제거
