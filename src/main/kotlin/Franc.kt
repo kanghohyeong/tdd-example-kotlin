@@ -1,5 +1,5 @@
 class Franc(amount: Int) : Money(amount) {
-    fun times(mutiplier: Int): Franc {
+    override fun times(mutiplier: Int): Money {
         return Franc(amount * mutiplier)
     }
 }
