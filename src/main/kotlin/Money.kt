@@ -1,4 +1,4 @@
-class Money(protected val amount: Int, private val currency: String) : Expression {
+class Money(val amount: Int, private val currency: String) : Expression {
     companion object {
         fun dollar(amount: Int): Money {
             return Money(amount, "USD")
@@ -14,7 +14,11 @@ class Money(protected val amount: Int, private val currency: String) : Expressio
     }
 
     fun plus(addend: Money): Expression {
-        return Money(amount + addend.amount, currency())
+        return Sum(this, addend)
+    }
+
+    override fun reduce(to: String): Money {
+        return this
     }
 
     fun currency(): String {
