@@ -5,4 +5,6 @@ interface Expression {
     ): Money
 
     fun plus(addend: Expression): Expression
+
+    fun times(multiplier: Int): Expression
 }
