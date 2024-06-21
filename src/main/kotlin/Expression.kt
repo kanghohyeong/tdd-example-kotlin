@@ -3,4 +3,6 @@ interface Expression {
         bank: Bank,
         to: String,
     ): Money
+
+    fun plus(addend: Expression): Expression
 }
